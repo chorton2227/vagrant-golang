@@ -43,6 +43,10 @@ when calling the class. The version string is taken from the
 `vagrant up` if you haven't already setup the vagrant box or `vagrant provision`
 if the machine is already up.
 
+## Port Forwarding
+
+Port `8080` on the vagrant guest os is forwarded to port `8080` on the host os.
+
 ### Contributing
 
 Any contributions are welcome. Please just fork the repo and submit a pull

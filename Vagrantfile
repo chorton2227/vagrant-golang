@@ -10,3 +10,7 @@ Vagrant::Config.run do |config|
     puppet.manifest_file      = "init.pp"
   end
 end
+
+Vagrant.configure("2") do |config|
+  config.vm.network "forwarded_port", guest: 8080, host: 8080
+end
