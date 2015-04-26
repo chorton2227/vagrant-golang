@@ -8,8 +8,15 @@ class setup {
   }
 }
 
+class docker {
+  exec { "install-docker":
+    command => "/usr/bin/wget -qO- https://get.docker.com/ | sh",
+  }
+}
+
 class {
   "setup":
     stage => prepare;
+  "docker":;
   "golang":;
 }
